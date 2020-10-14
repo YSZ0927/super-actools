@@ -49,6 +49,20 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "release-it": {
+    "git": {
+      "commitArgs": [
+        "--no-verify"
+      ]
+    },
+    "npm": {
+      "publish": false
+    }
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "prepare-commit-msg": "prepare-commit-msg || ( exec < /dev/tty && git cz --hook) || true"
+  },
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
