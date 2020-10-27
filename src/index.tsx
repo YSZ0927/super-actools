@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import 'moment/locale/zh-cn';
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>

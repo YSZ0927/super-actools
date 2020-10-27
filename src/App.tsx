@@ -1,14 +1,17 @@
 import React from 'react';
-import { Button } from 'antd';
-import './app.css';
+import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'connected-react-router'
+import { createBrowserHistory } from 'history'
+import store from './store'
+import BasicRouter from './routes'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <Button type="primary">Button</Button>
-      </header>
-    </div>
+    <Provider store={store}>
+      <ConnectedRouter history={createBrowserHistory()}>
+        <BasicRouter/>
+      </ConnectedRouter>
+    </Provider>
   );
 }
 
