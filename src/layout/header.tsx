@@ -1,18 +1,25 @@
-import React from 'react'
-import { Layout, Menu } from 'antd';
+import React from 'react';
+import { Layout, Menu, Dropdown } from 'antd';
+import './index.less'
 
 const { Header } = Layout;
 
+const menu = () => (
+  <Menu>
+    <Menu.Item>哈哈哈</Menu.Item>
+    <Menu.Item>阿舒服点</Menu.Item>
+  </Menu>
+);
+
 function MainHeader() {
-    return (
-        <Header>
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                <Menu.Item key="1">nav 1</Menu.Item>
-                <Menu.Item key="2">nav 2</Menu.Item>
-                <Menu.Item key="3">nav 3</Menu.Item>
-             </Menu>
-        </Header>
-    )
+  return (
+    <Header>
+      <div className='header'>
+        {/* <Dropdown overlay={menu}>菜单</Dropdown> */}
+        111
+      </div>
+    </Header>
+  );
 }
 
-export default MainHeader
+export default MainHeader;

@@ -1,11 +1,11 @@
-import React from 'react'
-import { Button } from 'antd';
+import React from 'react';
+import phoneImg from '../../assets/image/iphone7.png';
 
 function CreateNewItem() {
-    return (
-        <Button>
-            asdf
-        </Button>
-    )
+  return (
+    <div className='preview-box'>
+      <img src={phoneImg} alt='' />
+    </div>
+  );
 }
-export default CreateNewItem
+export default CreateNewItem;

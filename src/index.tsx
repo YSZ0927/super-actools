@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import 'moment/locale/zh-cn';
 import 'antd/dist/antd.css';
+import './styles/common.less'
 
 ReactDOM.render(
   <App />,
